@@ -28,9 +28,9 @@ app.use('/processors/:id', products)
 app.use('/cart', cartItems)
 
 //PRODUCTION MODE
-// if (process.env.NODE_ENV === 'production') {
-// 	app.use(express.static('client/build'));
-// }
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
 
 // app.get('*', (request, response) => {
 // 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
