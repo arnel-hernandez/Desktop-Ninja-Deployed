@@ -14,13 +14,13 @@ async function loadCollection() {
 }
 
 //@route GET /cart , Show Items
-router.get('/', async (req, res) => {
+router.get('/api/', async (req, res) => {
     const processor = await loadCollection();
     res.send(await processor.collection('cart').find({}).toArray());
 })
 
 //@route POST /cart , Show Cart Items
-router.post('/', async (req,res) => {
+router.post('/api/', async (req,res) => {
     console.log(req.body)
     const cart = await loadCollection()
     const addTocart = await cart.collection('cart').insertOne({
