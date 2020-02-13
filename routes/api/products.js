@@ -13,13 +13,13 @@ async function loadCollection() {
 }
 
 //@route GET /processors , Show Items
-router.get('/api/', async (req, res) => {
+router.get('/', async (req, res) => {
     const processor = await loadCollection();
     res.send(await processor.collection('processors').find({}).toArray());
 })
 
 //@route GET /processors , Show One Items
-router.get('api/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     const processor = await loadCollection()
     //CONVERT TO MONGO OBJECT
     let ObjectID = mongojs.ObjectID
