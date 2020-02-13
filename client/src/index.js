@@ -14,8 +14,8 @@ import thunk from 'redux-thunk'
 import rootReducer from './redux/reducers/rootReducer'
 //CREATE STORE WITH COMBINE REDUCER
 
-const store = createStore(rootReducer, compose(applyMiddleware(thunk),
-window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()))
+const store = createStore(rootReducer, compose(applyMiddleware(thunk)))
+// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 //ADD STORE INSIDE PROVIDER TO SHARE STATE TO APP
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
