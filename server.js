@@ -30,7 +30,7 @@ app.use('/cart', cartItems)
 //Handle Production
 if(process.env.NODE_ENV === 'production'){
   //Static folder
-  app.use(express.static(__dirname + '/client/build/static'));
+  app.use(express.static(__dirname + '/client/build'));
 
   //Handle SPA
   app.get(/.*/, (req, res) => res.sendFile(__dirname + '/client/build/index.html'));
