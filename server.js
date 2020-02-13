@@ -37,7 +37,7 @@ app.get('*', (request, response) => {
 });
 
 //TO DEPLOY
-const port = process.env.PORT || 5000
+const port = process.env.PORT
 
 if (port == null || port == "") {
     port = 5000;
