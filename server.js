@@ -23,9 +23,9 @@ const products = require('./routes/api/products')
 const cartItems = require('./routes/api/cart')
 
 //USE ROUTES
-app.use('/processors', products)
-app.use('/processors/:id', products)
-app.use('/cart', cartItems)
+app.use('api/processors', products)
+app.use('api/processors/:id', products)
+app.use('api/cart', cartItems)
 
 //Handle Production
 if(process.env.NODE_ENV === 'production'){
