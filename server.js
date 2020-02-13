@@ -37,10 +37,8 @@ app.use('/cart', cartItems)
 // });
 
 //TO DEPLOY
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
-if (port == null || port == "") {
-    port = 5000;
-  }
+console.log(port)
 
 app.listen(port, () => console.log(`Server Started On Port ${port}`))
